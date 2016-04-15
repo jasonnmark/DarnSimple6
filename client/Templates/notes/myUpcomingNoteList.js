@@ -1,5 +1,5 @@
 Template.myUpcomingNoteList.helpers({
-  posts: function() {
+  notes: function() {
     return Notes.find({}, {sort: {submitted: -1}});
   }
 });

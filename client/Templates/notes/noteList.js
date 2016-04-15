@@ -1,5 +1,5 @@
 Template.noteList.helpers({
   notes: function() {
-    return Notes.find({}, {sort: {submitted: -1}});
+    return Notes.find({}, {sort: {dueDate: 1}});
   }
 });

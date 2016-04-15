@@ -10,7 +10,7 @@
     <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
   {{else}}
       <span class="text {{#if isItDone}}noteDone{{/if}} editNote"  >{{title}}</span>  
-      <span  class="editNote"  >{{moFormat dueDate referenceDate}}</span> 
+      <span  class="editNote"  >{{moFromNow dueDate withoutSuffix}}</span> 
   {{/if}}
   {{#if starred}}
   	<a href="#" class="noteStar starred"><i class="fa fa-star"></i></a>

@@ -1,4 +1,5 @@
 <template name="noteSubmit">
+<!--
   <form class="main newReminder page form-inline" role="form"> 
     <div class="form-group">
           <input name="title" id="title" type="text" value="" placeholder="Add note" class="form-control"/>
@@ -7,31 +8,12 @@
           <input name="dueDate" id="dueDate" type="date" value="" placeholder="Due Date" class="form-control datepicker"/>
     </div>
     <div class="form-group">      
-<!--
-    <span class="input-group-btn">
-		<button class="btn btn-success btn-add addNote" type="button">
-        	<i class="fa fa-plus"></i>
-		</button>
-    </span>
--->
     </div>
     <input type="submit" value="Submit" class="btn btn-primary"/>
   </form>
+-->
   
   {{> quickForm collection="Notes" id="insertNotesForm" type="insert"}}
 
   
 </template>
-
-<!-- April rebuild
-<template name="noteSubmit">
-  <form class="main form page">
-	<div class="form-group">
-      <div class="controls">
-          <input name="title" id="title" type="text" value="" placeholder="Enter Reminder" class="form-control"/>
-      </div>
-    </div>
-    <input type="submit" value="Submit" class="btn btn-primary"/>
-  </form>
-</template>
--->

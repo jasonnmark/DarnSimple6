@@ -1,3 +1,4 @@
+/*
 if (Notes.find().count() === 0) {
   Notes.insert({
     title: 'Introducing Telescope'
@@ -11,3 +12,4 @@ if (Notes.find().count() === 0) {
     title: 'The Meteor Book'
   });
 }
+*/

@@ -1,7 +1,23 @@
 <template name="noteItem">
-  <div class="note">
-    <div class="note-content">
-	    
+  <div class="note">	   
+	    <div class="noteList">
+	      <li class="{{#if isItDone}}checked{{/if}}">
+		  	<input type="checkbox" checked="{{isItDone}}" class="toggle-isItDone" />
+   {{#if editing}}
+    <input type="text" id="noteTitle" value="{{title}}" /> 
+    <input type="text" id="noteDueDate" value="{{dueDate}}" />
+    <button class="btn btn-sm btn-primary buttonToSaveNewValue" type="submit">Save</button> 
+    <a href="#" class="delete"><i class="fa fa-trash-o"></i></a>
+  {{else}}
+      <span class="text {{#if isItDone}}noteDone{{/if}} editNote"  >{{title}}</span>  
+      <span  class="editNote"  >{{dueDate}}</span> 
+  {{/if}}
+		  	<a href="#" class="noteStar {{#if starred}}starred{{/if}}"><i class="fa fa-star"></i></a>
+		  </li>
+	    </div>
+    </div>
+	       
+<!-- NEW in April
    {{#if editing}}
     <input type="text"  value="{{title}}" />
 	{{else}}
@@ -10,9 +26,15 @@
       <a href="#" class="noteStar {{#if starred}}starred{{/if}}"><i class="fa fa-star"></i></a> 
       <a href="{{pathFor 'noteEdit'}}">Edit</a>
       </p>
+  	{{/if}}    
+-->
 
   
-<!--
+</template>
+
+
+<!-- THIS WORKS but is ugly and inline.
+	
 	  <form class="main form page">
 	    <div class="form-group">
 	      <div class="controls">
@@ -23,9 +45,3 @@
 	    <hr/>
 	  </form>
 -->
-  	{{/if}}    
-  	      
-    </div>
-  </div>
-  
-</template>

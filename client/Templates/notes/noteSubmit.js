@@ -11,7 +11,8 @@ Template.noteSubmit.events({
     e.preventDefault();
 
     var note = {
-      title: $(e.target).find('[name=title]').val()
+      title: $(e.target).find('[name=title]').val(),
+      dueDate: $(e.target).find('[name=dueDate]').val(),
     };
 
 

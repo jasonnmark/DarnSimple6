@@ -1,7 +1,4 @@
 Meteor.publish('posts', function() {
-  return Posts.find();
+  return Notes.find();
 });
 
-Meteor.publish('comments', function() {
-  return Comments.find();
-});

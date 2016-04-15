@@ -67,6 +67,9 @@ input[type="text"].add-reminder {
   	padding-top: -10px;
   }
 
+.noteList li {
+	list-style:none;
+}
 .noteDone {
 	color: grey;
 	text-decoration: line-through;
@@ -77,7 +80,7 @@ input[type="text"].add-reminder {
 }
 
 .starred {
-	color:yellow;
+	color:orange;
 }
 
 /* Lifestream */

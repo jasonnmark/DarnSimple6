@@ -1,0 +1,150 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.gravatar {
+	margin-top: -10px;	
+}
+
+.jumbotron p {
+	font-size: 14px;
+	margin-bottom: 0px;
+}
+.jumbotron {
+/*   padding: 10px; */
+  background-color: eeeee;
+/*   margin-bottom: 0px; */
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.scroller{
+  height:200px;
+  overflow-y:scroll;
+  width:100%;
+}
+
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.page-header{
+	margin: 0px;
+}
+
+.align-left{
+		float: left;
+		margin-bottom: 0px;
+}
+.align-right{
+		float: right;
+		margin-bottom: 0px;
+}
+
+.modal-footer {
+  padding: 15px;
+  text-align: left;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Calendar */
+#eventlist { list-style:none; }
+#eventlist li { list-style:none; padding:3px; border-bottom:2px solid #eee;}
+.eventtitle { font-weight:bold; }
+
+/* Checklist */
+input[type="text"].add-reminder {
+  	margin-bottom: -10px;
+  	padding-top: -10px;
+  }
+
+
+/* Lifestream */
+    #lifestream {
+/*       background: #333; */
+      border-radius: 7px;
+/*       color: #d4d4d4; */
+/*       width: 450px; */
+      font-size:11px;
+    }
+/*
+    #lifestream a {
+      color: #f6dd97;
+      text-decoration: none;
+    }
+    #lifestream a:hover {
+      color: #fff5d8;
+      text-decoration: underline;
+    }../templates/dashboard/notes/noteItem.js
+*/
+    #lifestream ul {
+      padding: 10px;
+      list-style: none;
+    }
+    #lifestream li {
+      padding: 5px 3px 5px 25px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      white-space: pre-wrap;
+    }
+    #lifestream li:hover {
+      background-color: #e9e9e9;
+    }
+    #lifestream .timeago {
+      opacity: .5;
+    }
+
+
+/* REMOVE if we don't use these */
+/*    Social Icons from here: http://lipis.github.io/bootstrap-social/ */
+
+.btn-social{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.btn-social>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social.btn-lg{padding-left:61px}.btn-social.btn-lg>:first-child{line-height:45px;width:45px;font-size:1.8em}
+.btn-social.btn-sm{padding-left:38px}.btn-social.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social.btn-xs{padding-left:30px}.btn-social.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon{position:relative;padding-left:44px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;height:34px;width:34px;padding:0}.btn-social-icon>:first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
+.btn-social-icon.btn-lg{padding-left:61px}.btn-social-icon.btn-lg>:first-child{line-height:45px;width:45px;font-size:1.8em}
+.btn-social-icon.btn-sm{padding-left:38px}.btn-social-icon.btn-sm>:first-child{line-height:28px;width:28px;font-size:1.4em}
+.btn-social-icon.btn-xs{padding-left:30px}.btn-social-icon.btn-xs>:first-child{line-height:20px;width:20px;font-size:1.2em}
+.btn-social-icon>:first-child{border:none;text-align:center;width:100% !important}
+.btn-social-icon.btn-lg{height:45px;width:45px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-sm{height:30px;width:30px;padding-left:0;padding-right:0}
+.btn-social-icon.btn-xs{height:22px;width:22px;padding-left:0;padding-right:0}
+.btn-google{color:#fff;background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}.btn-google:focus,.btn-google.focus{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}
+.btn-google:hover{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}
+.btn-google:active,.btn-google.active,.open>.dropdown-toggle.btn-google{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}.btn-google:active:hover,.btn-google.active:hover,.open>.dropdown-toggle.btn-google:hover,.btn-google:active:focus,.btn-google.active:focus,.open>.dropdown-toggle.btn-google:focus,.btn-google:active.focus,.btn-google.active.focus,.open>.dropdown-toggle.btn-google.focus{color:#fff;background-color:#a32b1c;border-color:rgba(0,0,0,0.2)}
+.btn-google:active,.btn-google.active,.open>.dropdown-toggle.btn-google{background-image:none}
+.btn-google.disabled,.btn-google[disabled],fieldset[disabled] .btn-google,.btn-google.disabled:hover,.btn-google[disabled]:hover,fieldset[disabled] .btn-google:hover,.btn-google.disabled:focus,.btn-google[disabled]:focus,fieldset[disabled] .btn-google:focus,.btn-google.disabled.focus,.btn-google[disabled].focus,fieldset[disabled] .btn-google.focus,.btn-google.disabled:active,.btn-google[disabled]:active,fieldset[disabled] .btn-google:active,.btn-google.disabled.active,.btn-google[disabled].active,fieldset[disabled] .btn-google.active{background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}
+.btn-google .badge{color:#dd4b39;background-color:#fff}
+
+    
+    
+    
+/* Below not used */
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+#home .navbar-nav .active a {
+	background-color:red;
+	
+}

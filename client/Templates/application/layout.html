@@ -1,0 +1,12 @@
+<template name="layout">
+  <div class="container">
+    {{#if currentUser}}
+    	{{> loggedInNavigation}}
+    {{else}}
+    	{{> loggedOutNavigation}}
+    {{/if}}
+    <div id="main">
+      {{> yield}}
+    </div>
+  </div>
+</template>

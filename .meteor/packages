@@ -30,3 +30,8 @@ check
 audit-argument-checks
 lbee:moment-helpers
 deepwell:bootstrap-datepicker2
+aldeed:autoform
+aldeed:autoform-bs-datepicker
+aldeed:simple-schema
+aldeed:collection2
+rajit:bootstrap3-datepicker

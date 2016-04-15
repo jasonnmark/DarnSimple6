@@ -1,31 +1,27 @@
-Template.postEdit.events({
+Template.noteEdit.events({
   'submit form': function(e) {
     e.preventDefault();
 
-    var currentPostId = this._id;
+    var currentNoteId = this._id;
 
-    var postProperties = {
-      url: $(e.target).find('[name=url]').val(),
+    var noteProperties = {
       title: $(e.target).find('[name=title]').val()
     }
 
-    Posts.update(currentPostId, {$set: postProperties}, function(error) {
+// 	console.log(noteProperties); 
+	console.log(this._id); 
+
+
+
+    Notes.update(currentNoteId, {$set: noteProperties}, function(error) {
       if (error) {
         // display the error to the user
         throwError(error.reason);
       } else {
-        Router.go('postPage', {_id: currentPostId});
+        Router.go('dashboard', {_id: currentNoteId});
       }
     });
   },
 
-  'click .delete': function(e) {
-    e.preventDefault();
 
-    if (confirm("Delete this post?")) {
-      var currentPostId = this._id;
-      Posts.remove(currentPostId);
-      Router.go('postsList');
-    }
-  }
 });

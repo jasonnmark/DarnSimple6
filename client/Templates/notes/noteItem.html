@@ -3,8 +3,21 @@
     <div class="note-content">
       <p>{{title}} 
 	  <a class="delete" href="#"><i class="fa fa-trash" aria-hidden="true"></i></a> 
-      <a href="#" class="noteStar {{#if starred}}starred{{/if}}"><i class="fa fa-star"></i></a>
+      <a href="#" class="noteStar {{#if starred}}starred{{/if}}"><i class="fa fa-star"></i></a> 
+      <a href="{{pathFor 'noteEdit'}}">Edit</a>
       </p>
     </div>
   </div>
+  
+  <form class="main form page">
+    <div class="form-group">
+      <div class="controls">
+          <input name="title" id="title" type="text" value="{{title}}" placeholder="title" class="form-control"/>
+      </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+    <hr/>
+  </form>
+
+  
 </template>

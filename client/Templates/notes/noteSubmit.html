@@ -13,7 +13,23 @@
   </form>
 -->
   
-  {{> quickForm collection="Notes" id="insertNotesForm" type="insert"}}
+<!--   {{> quickForm collection="Notes" id="insertNotesForm" type="insert"}} -->
 
+<div class="submitNote">
+	<div class="input-group">
+	  {{#autoForm collection="Notes" id="insertNotesForm" class="form-inline" type="insert"}}
+	    <div class="input-group">
+		    <fieldset>
+			    {{> afQuickField placeholder="Add Note" class="col-sm-6" name='title'}}
+				{{> afQuickField placeholder="Due Date (optional)" class="col-sm-6" name='dueDate'}}
+<!-- 		     <div class="input-group-addon"><i class="fa fa-calendar"></i></div> -->
+		    </fieldset>
+		    <div class="input-group-btn">
+			    <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+			</div>
+	    </div>
+	  {{/autoForm}}
+	</div>
+</div>
   
 </template>

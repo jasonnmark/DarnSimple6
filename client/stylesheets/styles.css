@@ -67,6 +67,18 @@ input[type="text"].add-reminder {
   	padding-top: -10px;
   }
 
+.noteDone {
+	color: grey;
+	text-decoration: line-through;
+}
+
+.noteStar {
+	color:grey;
+}
+
+.starred {
+	color:yellow;
+}
 
 /* Lifestream */
     #lifestream {
@@ -84,7 +96,7 @@ input[type="text"].add-reminder {
     #lifestream a:hover {
       color: #fff5d8;
       text-decoration: underline;
-    }../templates/dashboard/notes/noteItem.js
+    }../templates/dashboard/note/noteItem.js
 */
     #lifestream ul {
       padding: 10px;

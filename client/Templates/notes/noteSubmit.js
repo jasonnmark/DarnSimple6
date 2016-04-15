@@ -1,4 +1,12 @@
 Template.noteSubmit.events({
+	"click .noteStar": function () {
+// 		console.log("star"); 
+		Note.update(this._id, {
+	  		$set: {starred: ! this.starred}
+	  	});
+
+	},		
+	
   'submit form': function(e) {
     e.preventDefault();
 

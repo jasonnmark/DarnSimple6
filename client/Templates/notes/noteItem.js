@@ -1,3 +1,10 @@
+/*
+Template.noteItem.editing = function() {
+    return Session.get("target" + this._id);
+  };
+	
+*/
+
 Template.noteItem.events({
 	'click .delete': function(e) {
 		e.preventDefault();
@@ -7,7 +14,12 @@ Template.noteItem.events({
 			Notes.remove(currentNoteId);
 			Router.go('dashboard');
 		}
-	},
+	},	
+
+	"click #edit": function(e, t) {
+// 	  console.log(this._id);
+      return Session.set("target" + t.data._id, true);
+    },
 	
 	
 	'submit form': function(e) {

@@ -83,6 +83,10 @@ input[type="text"].add-reminder {
 	color:orange;
 }
 
+.trashCan {
+	color:grey;
+}
+
 /* Lifestream */
     #lifestream {
 /*       background: #333; */

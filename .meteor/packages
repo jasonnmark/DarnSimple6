@@ -29,3 +29,4 @@ service-configuration
 check
 audit-argument-checks
 lbee:moment-helpers
+deepwell:bootstrap-datepicker2

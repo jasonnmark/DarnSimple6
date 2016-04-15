@@ -16,11 +16,10 @@ Template.noteItem.events({
 		}
 	},	
 
-	"click .toggle-isItDone": function () {
+	"click .toggleIsItDone": function () {
 	  	Notes.update(this._id, {
 	  		$set: {isItDone: ! this.isItDone}
 	  	});
-// 	  	console.log("checking");
 	},
 
 	"click #edit": function(e, t) {
@@ -60,7 +59,6 @@ Template.noteItem.events({
 		Notes.update(this._id, {
 	  		$set: {starred: ! this.starred}
 	  	});
-
 	},	
 	
 	

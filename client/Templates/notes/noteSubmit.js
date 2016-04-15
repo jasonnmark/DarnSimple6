@@ -7,15 +7,21 @@ Template.noteSubmit.events({
 
 	},		
 	
+	
+// 		'click .addNote': function(e) {
   'submit form': function(e) {
+
     e.preventDefault();
 
     var note = {
       title: $(e.target).find('[name=title]').val(),
-      dueDate: $(e.target).find('[name=dueDate]').val(),
+      dueDate: $(e.target).find('[name=dueDate]').val()
     };
 
-
+    // Clear form
+    event.target.title.value = "";
+    event.target.dueDate.value = "";
+        
     Meteor.call('noteInsert', note, function(error, result) {
 /*
       // display the error to the user and abort
@@ -34,3 +40,7 @@ Template.noteSubmit.events({
 
   }
 });
+
+Template.noteSubmit.rendered = function() {
+  this.$('.datepicker').datepicker();
+}

@@ -2,17 +2,22 @@
   <div class="note">	   
 	    <div class="noteList">
 	      <li class="{{#if isItDone}}checked{{/if}}">
-		  	<input type="checkbox" checked="{{isItDone}}" class="toggle-isItDone" />
+		  	<input type="checkbox" checked="{{isItDone}}" class="toggleIsItDone" />
    {{#if editing}}
     <input type="text" id="noteTitle" value="{{title}}" /> 
     <input type="text" id="noteDueDate" value="{{dueDate}}" />
     <button class="btn btn-sm btn-primary buttonToSaveNewValue" type="submit">Save</button> 
-    <a href="#" class="delete"><i class="fa fa-trash-o"></i></a>
+    <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
   {{else}}
       <span class="text {{#if isItDone}}noteDone{{/if}} editNote"  >{{title}}</span>  
       <span  class="editNote"  >{{dueDate}}</span> 
   {{/if}}
-		  	<a href="#" class="noteStar {{#if starred}}starred{{/if}}"><i class="fa fa-star"></i></a>
+  {{#if starred}}
+  	<a href="#" class="noteStar starred"><i class="fa fa-star"></i></a>
+  {{else}} 
+    <a href="#" class="noteStar"><i class="fa fa-star-o"></i></a>
+  {{/if}}
+		  <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
 		  </li>
 	    </div>
     </div>

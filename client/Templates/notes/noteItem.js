@@ -6,21 +6,22 @@ Template.noteItem.editing = function() {
 */
 
 Template.noteItem.events({
+	"click .toggleIsItDone": function () {
+// 		console.log("done"); 
+	  	Notes.update(this._id, {
+	  		$set: {isItDone: ! this.isItDone}
+	  	});
+	},
+	
 	'click .delete': function(e) {
+// 		console.log("done"); 
 		e.preventDefault();
-
 		if (confirm("Do you want to perminently delete this item? It can not be recovered?")) {
 			var currentNoteId = this._id;
 			Notes.remove(currentNoteId);
 			Router.go('dashboard');
 		}
 	},	
-
-	"click .toggleIsItDone": function () {
-	  	Notes.update(this._id, {
-	  		$set: {isItDone: ! this.isItDone}
-	  	});
-	},
 
 	"click #edit": function(e, t) {
 // 	  console.log(this._id);
@@ -55,7 +56,7 @@ Template.noteItem.events({
 	
 	
 	'click .noteStar': function () {
-// 		console.log("star"); 
+		console.log("star"); 
 		Notes.update(this._id, {
 	  		$set: {starred: ! this.starred}
 	  	});

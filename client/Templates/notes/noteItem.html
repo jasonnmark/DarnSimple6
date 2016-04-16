@@ -3,14 +3,39 @@
 	    <div class="noteList">
 	      <li class="{{#if isItDone}}checked{{/if}}">
 		  	<input type="checkbox" checked="{{isItDone}}" class="toggleIsItDone" />
+
    {{#if editing}}
     <input type="text" id="noteTitle" value="{{title}}" /> 
     <input type="text" id="noteDueDate" value="{{dueDate}}" />
     <button class="btn btn-sm btn-primary buttonToSaveNewValue" type="submit">Save</button> 
     <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
   {{else}}
+  
+<!--
+	{#autoForm collection="Notes" id=makeUniqueID type="update"}}
+	  	{{> afFormGroup name="title" label=false}}
+	{{/autoForm}}
+-->
+<!-- From submit, for some reason doesn't work here
+	  {{#autoForm collection="Notes" id="insertNotesForm" class="form-inline" type="insert"}}
+	    <div class="input-group">
+		    <fieldset>
+			    {{> afQuickField placeholder="Add Note" class="col-sm-6" name='title' label=false}}
+				{{> afQuickField placeholder="Due Date (optional)" class="col-sm-6" name='dueDate' label=false}}
+		{{/autoForm}}
+					    
+-->  
+	      
       <span class="text {{#if isItDone}}noteDone{{/if}} editNote"  >{{title}}</span>  
       <span  class="editNote"  >{{moFromNow dueDate withoutSuffix}}</span> 
+
+<!-- http://autoform.meteorapp.com/update-each
+      {{#autoForm id=makeUniqueID type="update" collection=Collections.Notes doc=this autosave=true}}
+          {{> afFormGroup name="title" label=false}}
+        {{/autoForm}}
+-->
+        
+        
 <!-- debugging
       <p>{{createdAt}}</p>
       <p>{{updatedAt}}</p>

@@ -79,6 +79,11 @@ input[type="text"].add-reminder {
 	color:grey;
 }
 
+.editable:hover {
+	    background-color: #E8F3FF;
+
+}
+
 /*
 .submitNote {
 	display: inline-block;

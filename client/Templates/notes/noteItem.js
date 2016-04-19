@@ -53,7 +53,13 @@ Template.noteItem.events({
 	    });
 	},
 	
-	
+	"click .editable": function(){
+	    $(this).editorEnabled = true;
+	    console.log((this)+"hey");
+		$((this)+".editable").hide();
+
+
+	},
 	
 	'click .noteStar': function () {
 		console.log("star"); 
@@ -65,3 +71,11 @@ Template.noteItem.events({
 	
 });
 
+
+
+/*
+Template.layout.helpers({
+	
+	
+});
+*/

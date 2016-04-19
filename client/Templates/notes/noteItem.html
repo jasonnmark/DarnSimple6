@@ -1,7 +1,7 @@
 <template name="noteItem">
   <div class="note">	   
 	    <div class="noteList">
-	      <li class="{{#if isItDone}}checked{{/if}}">
+	      <li class="{{#if isItDone}}checked{{/if}} editable">
 		  	<input type="checkbox" checked="{{isItDone}}" class="toggleIsItDone" />
 
    {{#if editing}}

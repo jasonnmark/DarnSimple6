@@ -84,18 +84,6 @@ input[type="text"].add-reminder {
 
 }
 
-/*
-.submitNote {
-	display: inline-block;
-}
-*/
-
-/*
-.submitNote .control-label {
-	display: none;
-}
-*/
-
 .starred {
 	color:orange;
 }

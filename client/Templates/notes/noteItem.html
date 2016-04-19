@@ -5,12 +5,26 @@
 		  	<input type="checkbox" checked="{{isItDone}}" class="toggleIsItDone" />
 
    {{#if editing}}
-    <input type="text" id="noteTitle" value="{{title}}" /> 
+    <input type="contenteditable" id="noteTitle" value="{{title}}" /> 
     <input type="text" id="noteDueDate" value="{{dueDate}}" />
     <button class="btn btn-sm btn-primary buttonToSaveNewValue" type="submit">Save</button> 
     <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
   {{else}}
+
+<!-- Using babrahams -->
+
   
+<!-- Using Autoforms   -->
+<!-- {{> quickForm collection="Notes" doc=this id="updateBookForm" type="update"}} -->
+
+<!--
+    {{#autoForm id="editplayer" collection="Notes" type="update" doc=this}}
+        {{> afQuickField name="title" label=false}}
+        <button type="submit">Submit</button>
+    {{/autoForm}}
+-->
+
+
 <!--
 	{#autoForm collection="Notes" id=makeUniqueID type="update"}}
 	  	{{> afFormGroup name="title" label=false}}
@@ -26,7 +40,7 @@
 					    
 -->  
 	      
-      <span class="text {{#if isItDone}}noteDone{{/if}} editNote"  >{{title}}</span>  
+      <span class="text {{#if isItDone}}noteDone{{/if}} editNote editable"  >{{> editableText collection="notes" field="title"}}</span>  
       <span  class="editNote"  >{{moFromNow dueDate withoutSuffix}}</span> 
 
 <!-- http://autoform.meteorapp.com/update-each

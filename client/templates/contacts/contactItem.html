@@ -1,0 +1,83 @@
+<template name="noteItem">
+  <div class="note">	   
+	    <div class="noteList">
+	      <li class="{{#if isItDone}}checked{{/if}} editable">
+		  	<input type="checkbox" checked="{{isItDone}}" class="toggleIsItDone" />
+
+   {{#if editing}}
+    <input type="contenteditable" id="noteTitle" value="{{title}}" /> 
+    <input type="text" id="noteDueDate" value="{{dueDate}}" />
+    <button class="btn btn-sm btn-primary buttonToSaveNewValue" type="submit">Save</button> 
+    <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
+  {{else}}
+
+
+<!-- Using Autoforms   -->
+<!-- {{> quickForm collection="Notes" doc=this id="updateBookForm" type="update"}} -->
+
+<!--
+    {{#autoForm id="editplayer" collection="Notes" type="update" doc=this}}
+        {{> afQuickField name="title" label=false}}
+        <button type="submit">Submit</button>
+    {{/autoForm}}
+-->
+
+
+<!--
+	{#autoForm collection="Notes" id=makeUniqueID type="update"}}
+	  	{{> afFormGroup name="title" label=false}}
+	{{/autoForm}}
+-->
+<!-- From submit, for some reason doesn't work here
+	  {{#autoForm collection="Notes" id="insertNotesForm" class="form-inline" type="insert"}}
+	    <div class="input-group">
+		    <fieldset>
+			    {{> afQuickField placeholder="Add Note" class="col-sm-6" name='title' label=false}}
+				{{> afQuickField placeholder="Due Date (optional)" class="col-sm-6" name='dueDate' label=false}}
+		{{/autoForm}}
+					    
+-->  
+	      
+      <span class="text {{#if isItDone}}noteDone{{/if}} editNote editable"  >{{> editableText collection="notes" field="title"}}</span>  
+      <span  class="editNote"  >{{moFromNow dueDate withoutSuffix}}</span> 
+
+<!-- http://autoform.meteorapp.com/update-each
+      {{#autoForm id=makeUniqueID type="update" collection=Collections.Notes doc=this autosave=true}}
+          {{> afFormGroup name="title" label=false}}
+        {{/autoForm}}
+-->
+        
+        
+<!-- debugging
+      <p>{{createdAt}}</p>
+      <p>{{updatedAt}}</p>
+      <p>Author Id: {{authorID}}</p>
+      <p>Assigned To Id: {{assignedToID}}</p>
+      <p>Assigned To Name: {{assignedToName}}</p>
+-->
+  {{/if}}
+  {{#if starred}}
+  	<a href="#" class="noteStar starred"><i class="fa fa-star"></i></a>
+  {{else}} 
+    <a href="#" class="noteStar"><i class="fa fa-star-o"></i></a>
+  {{/if}}
+		  <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
+		  </li>
+	    </div>
+    </div>
+	         
+</template>
+
+
+<!-- THIS WORKS but is ugly and inline.
+	
+	  <form class="main form page">
+	    <div class="form-group">
+	      <div class="controls">
+	          <input name="title" id="title" type="text" value="{{title}}" placeholder="title" class="form-control"/>
+	      </div>
+	    </div>
+	    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+	    <hr/>
+	  </form>
+-->

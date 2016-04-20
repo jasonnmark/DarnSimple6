@@ -1,5 +1,5 @@
 Template.contactList.helpers({
-  notes: function() {
-    return Notes.find({}, {sort: {dueDate: 1, starred: -1, title:1}});
+  contacts: function() {
+    return Contacts.find({}, {sort: {dueDate: 1, starred: -1, title:1}});
   }
 });

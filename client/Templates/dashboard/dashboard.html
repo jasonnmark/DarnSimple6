@@ -1,8 +1,8 @@
 <template name="dashboard">
-<!-- 	{{> noteSubmit}} -->
-	{{> quickForm collection="Notes" doc=this id="addNotesForm" type="insert"}}
+	{{> noteSubmit}}
+<!-- 	{{> quickForm collection="Notes" doc=this id="addNotesForm" type="insert"}} -->
 	{{> noteList}}
 	
-	{{> quickForm collection="Contacts" doc=this id="addContactForm" type="insert"}}
-<!-- 	{{> contactList}} -->
+	{{> quickForm collection="Contacts" doc=this id="addContactsForm" type="insert"}}
+	{{> contactList}}
 </template>

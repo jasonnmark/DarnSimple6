@@ -1,14 +1,7 @@
-/*
-Template.noteItem.editing = function() {
-    return Session.get("target" + this._id);
-  };
-	
-*/
-
-Template.noteItem.events({
+Template.contactItem.events({
 	"click .toggleIsItDone": function () {
 // 		console.log("done"); 
-	  	Notes.update(this._id, {
+	  	Contacts.update(this._id, {
 	  		$set: {isItDone: ! this.isItDone}
 	  	});
 	},
@@ -17,8 +10,8 @@ Template.noteItem.events({
 // 		console.log("done"); 
 		e.preventDefault();
 		if (confirm("Do you want to perminently delete this item? It can not be recovered?")) {
-			var currentNoteId = this._id;
-			Notes.remove(currentNoteId);
+			var currentContactId = this._id;
+			Contacts.remove(currentContactId);
 			Router.go('dashboard');
 		}
 	},	
@@ -33,50 +26,28 @@ Template.noteItem.events({
 	'submit form': function(e) {
 	    e.preventDefault();
 	
-	    var currentNoteId = this._id;
+	    var currentContactId = this._id;
 	
-	    var noteProperties = {
+	    var contactProperties = {
 	      title: $(e.target).find('[name=title]').val()
 	    }
 	
-		// 	console.log(noteProperties); 
+		// 	console.log(contactProperties); 
 		// 	console.log(this._id); 
 	
 	
 	
-	    Notes.update(currentNoteId, {$set: noteProperties}, function(error) {
+	    Contacts.update(currentContactId, {$set: contactProperties}, function(error) {
 	      if (error) {
 	        // display the error to the user
 	        throwError(error.reason);
 	      } else {
-	        Router.go('dashboard', {_id: currentNoteId});
+	        Router.go('dashboard', {_id: currentContactId});
 	      }
 	    });
 	},
 	
-	"click .editable": function(){
-	    $(this).editorEnabled = true;
-	    console.log((this)+"hey");
-		$((this)+".editable").hide();
-
-
-	},
-	
-	'click .noteStar': function () {
-		console.log("star"); 
-		Notes.update(this._id, {
-	  		$set: {starred: ! this.starred}
-	  	});
-	},	
-	
-	
 });
 
 
 
-/*
-Template.layout.helpers({
-	
-	
-});
-*/

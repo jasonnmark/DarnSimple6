@@ -1,4 +1,7 @@
 <template name="dashboard">
 	{{> noteSubmit}}
 	{{> noteList}}
+	
+	{{> quickForm collection="Contacts" doc=this id="addContactForm" type="insert"}}
+	{{> contactList}}
 </template>

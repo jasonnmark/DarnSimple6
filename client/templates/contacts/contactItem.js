@@ -12,5 +12,3 @@ Template.contactItem.events({
 	
 });
 
-
-

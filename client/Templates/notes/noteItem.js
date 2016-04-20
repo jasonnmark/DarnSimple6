@@ -26,6 +26,7 @@ Template.noteItem.events({
 	"click #edit": function(e, t) {
 // 	  console.log(this._id);
       return Session.set("target" + t.data._id, true);
+      
     },
 	
 	

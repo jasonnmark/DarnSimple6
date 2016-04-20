@@ -4,12 +4,17 @@
 	      <li class="editable">
 	      
       <span class="editable"  >{{> editableText collection="contacts" field="firstName"}}</span>  
-<!--       <span  class="editNote"  >{{moFromNow dueDate withoutSuffix}}</span>  -->
-
+      contactOwnerID: {{contactOwnerID}} 
+      createdAt: {{createdAt}}
+      contactOwnerName: {{contactOwnerName}} 
+	  authorID: {{authorID}}
+	  {{#each emails}}
+	  	email: {{address}}
+	  {{/each}}
+    <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
 		  </li>
 	    </div>
-    </div>
-	         
+    </div>         
 </template>
 
 

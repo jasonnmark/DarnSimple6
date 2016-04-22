@@ -8,7 +8,13 @@ Template.contactItem.events({
 			Contacts.remove(currentContactId);
 			Router.go('dashboard');
 		}
-	}	
+	},
+		
+	'click .contactStar': function () {
+		Contacts.update(this._id, {
+	  		$set: {starred: ! this.starred}
+	  	});
+	}
 	
 });
 

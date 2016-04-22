@@ -11,7 +11,12 @@
 	  {{#each emails}}
 	  	email: {{address}}
 	  {{/each}}
-    <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
+	  	<a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
+    	{{#if starred}}
+			<a href="#" class="contactStar starred"><i class="fa fa-star"></i></a>
+		{{else}} 
+    		<a href="#" class="contactStar"><i class="fa fa-star-o"></i></a>
+		{{/if}}
 		  </li>
 	    </div>
     </div>         

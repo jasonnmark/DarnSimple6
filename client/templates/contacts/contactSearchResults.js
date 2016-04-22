@@ -1,7 +1,7 @@
-Template.contactSearch.helpers({
+Template.contactSearchResults.helpers({
   
  	contacts: function() {
-		var searchString = "ema"; 	
+// 		var searchString = "jas"; 	
 		var someCursor = Contacts.find({ firstName: searchString });
 		if(someCursor.count() == 0)
 		{
@@ -12,10 +12,11 @@ Template.contactSearch.helpers({
 		    var someCursor = Contacts.find({ firstName: mostSimilarString });
 			console.log(bestWord);
 		} else {
+		return someCursor;
 		console.log(someCursor.firstName);
 		}
 	console.log(someCursor);
-	return Contacts.find({ firstName: 'Max' });
+	return Contacts.find({firstName: bestWord});
  
 /*
 	console.log(searchString);

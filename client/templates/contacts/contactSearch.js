@@ -1,7 +1,7 @@
-Template.contactSearchResults.helpers({
+Template.contactSearch.helpers({
   
  	contacts: function() {
-		searchString = "jason"; 	
+		var searchString = "ema"; 	
 		var someCursor = Contacts.find({ firstName: searchString });
 		if(someCursor.count() == 0)
 		{
@@ -9,19 +9,13 @@ Template.contactSearchResults.helpers({
 		    var tempCursor = Contacts.find({ }, { firstName: true });
 		    // find most similar string
 		    var bestWord = mostSimilarString(tempCursor, "firstName", searchString, -1, false);
-// 		    var someCursor = Contacts.find({ firstName: mostSimilarString });
-		    	return Contacts.find({firstName: bestWord});
+		    var someCursor = Contacts.find({ firstName: mostSimilarString });
 			console.log(bestWord);
-			console.log('fuzzy match');
-
 		} else {
-		return someCursor;
 		console.log(someCursor.firstName);
-		console.log('exact match');
-
 		}
 	console.log(someCursor);
-
+	return Contacts.find({ firstName: 'Max' });
  
 /*
 	console.log(searchString);

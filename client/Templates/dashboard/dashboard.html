@@ -1,19 +1,9 @@
 <template name="dashboard">
-
-<!-- 	{{> EasySearch.Input index=playersIndex }} -->
-<!--
-    <ul>
-        {{#EasySearch.Each index=playersIndex }}
-            <li>Name of the player: {{name}}</li>
-        {{/EasySearch.Each}}
-    </ul>
--->
-
 	{{> noteSubmit}}
+<!-- 	{{> quickForm collection="Notes" doc=this id="addNotesForm" type="insert"}} -->
 	{{> noteList}}
 	{{> quickForm collection="Contacts" doc=this id="addContactsForm" type="insert"}}
 	{{> contactList}}
 	
-
-    
+	
 </template>

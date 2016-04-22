@@ -1,6 +1,6 @@
 Template.contactSearchResults.helpers({
  	contacts: function() {
-		searchString = "jas"; 	
+// 		searchString = ""; 	
 		var someCursor = Contacts.find({ firstName: searchString });
 		if(someCursor.count() == 0)
 		{

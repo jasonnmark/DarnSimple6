@@ -1,2 +1,4 @@
 Meteor.subscribe('notes');
-Meteor.subscribe('contacts');
+Meteor.subscribe('contacts');    
+
+// ClientDebugger.debugMode = true;

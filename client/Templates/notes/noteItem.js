@@ -1,15 +1,9 @@
-/*
-Template.noteItem.editing = function() {
-    return Session.get("target" + this._id);
-  };
-	
-*/
-
 Template.noteItem.events({
 	"click .toggleIsItDone": function () {
 	  	Notes.update(this._id, {
 	  		$set: {isItDone: ! this.isItDone}
 	  	});
+	  	
 	},
 	
 	'click .delete': function(e) {
@@ -29,14 +23,10 @@ Template.noteItem.events({
 	
 	'submit form': function(e) {
 	    e.preventDefault();
-	
 	    var currentNoteId = this._id;
-	
 	    var noteProperties = {
 	      title: $(e.target).find('[name=title]').val()
-	    }
-
-	
+	    }	
 	
 	    Notes.update(currentNoteId, {$set: noteProperties}, function(error) {
 	      if (error) {
@@ -47,48 +37,26 @@ Template.noteItem.events({
 	      }
 	    });
 	},
-	
-	"click .editable": function(){
-	    $(this).editorEnabled = true;
-		$((this)+".editable").hide();
 
-
-	},
 	
 	'click .noteStar': function () {
 		Notes.update(this._id, {
 	  		$set: {starred: ! this.starred}
 	  	});
 	},	
-	
-	
 });
 
 
 Template.noteItem.helpers({
 	dateColor: function() {
-		console.log(this.dueDate);
-		console.log(formatDate());
-		if(this.dueDate < new Date())
+		if(simpleDate(this.dueDate) < simpleDate(new Date()))
 		{
 			return 'overdue';
 		} else {
-			if(this.dueDate === new Date())
+			if(simpleDate(this.dueDate) === simpleDate(new Date()))
 			{
 				return 'today';
 			}
 		}
 	}
-/*
-	dateColor: function() {
-		if(this.dueDate < new Date())
-		{
-			console.log('overDue');
-
-		} else {
-			console.log('allGood');
-// 		return someCursor;
-		}
-	}
-*/
 });

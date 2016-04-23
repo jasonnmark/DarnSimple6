@@ -79,6 +79,18 @@ input[type="text"].add-reminder {
 	color:grey;
 }
 
+.noteEdit {
+	color:grey;
+}
+
+.overdue {
+	color:red;
+}
+
+.today {
+	color:orange;
+}
+
 .editable:hover {
 	    background-color: #E8F3FF;
 

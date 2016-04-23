@@ -65,10 +65,30 @@ Template.noteItem.events({
 });
 
 
-
+Template.noteItem.helpers({
+	dateColor: function() {
+		console.log(this.dueDate);
+		console.log(formatDate());
+		if(this.dueDate < new Date())
+		{
+			return 'overdue';
+		} else {
+			if(this.dueDate === new Date())
+			{
+				return 'today';
+			}
+		}
+	}
 /*
-Template.layout.helpers({
-	
-	
-});
+	dateColor: function() {
+		if(this.dueDate < new Date())
+		{
+			console.log('overDue');
+
+		} else {
+			console.log('allGood');
+// 		return someCursor;
+		}
+	}
 */
+});

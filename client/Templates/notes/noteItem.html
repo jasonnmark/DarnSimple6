@@ -39,7 +39,7 @@
 -->  
 	      
       <span class="text {{#if isItDone}}noteDone{{/if}} editNote editable"  >{{> editableText collection="notes" field="title"}}</span>  
-      <span  class="editNote"  >{{moFromNow dueDate withoutSuffix}}</span> 
+      <span  class="editNote"  >{{moFromNow dueDate withoutSuffix}}</span> {{dateColor}}
 
 <!-- http://autoform.meteorapp.com/update-each
       {{#autoForm id=makeUniqueID type="update" collection=Collections.Notes doc=this autosave=true}}

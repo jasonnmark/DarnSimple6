@@ -12,16 +12,13 @@ Template.contactSearchResults.helpers({
 		    	return Contacts.find({firstName: bestWord});
 			console.log(bestWord);
 			console.log('fuzzy match');
-
 		} else {
 		return someCursor;
 		console.log(someCursor.firstName);
 		console.log('exact match');
-
 		}
 	console.log(someCursor);
 
- 
 /*
 	console.log(searchString);
 	console.log('testing');

@@ -58,5 +58,8 @@ Template.noteItem.helpers({
 				return 'today';
 			}
 		}
+	},
+	daysFromNow: function() {
+		return daysAgo(this.dueDate);
 	}
 });

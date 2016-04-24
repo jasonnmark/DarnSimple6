@@ -28,7 +28,6 @@ accounts-google
 service-configuration
 check
 audit-argument-checks
-lbee:moment-helpers
 deepwell:bootstrap-datepicker2
 aldeed:autoform
 aldeed:autoform-bs-datepicker
@@ -40,3 +39,4 @@ comerc:autoform-contenteditable2
 babrahams:editable-text
 alanning:roles
 perak:fuzzy-search
+momentjs:moment

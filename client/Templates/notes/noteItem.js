@@ -49,6 +49,8 @@ Template.noteItem.events({
 
 Template.noteItem.helpers({
 	dateColor: function() {
+// 		return simpleDate(this.dueDate);
+		
 		if(simpleDate(this.dueDate) < simpleDate(new Date()))
 		{
 			return 'overdue';
@@ -58,6 +60,7 @@ Template.noteItem.helpers({
 				return 'today';
 			}
 		}
+		
 	},
 	daysFromNow: function() {
 		return daysAgo(this.dueDate);

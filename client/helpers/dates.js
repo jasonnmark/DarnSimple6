@@ -1,10 +1,19 @@
 simpleDate = function(longDate) {
-   var yyyy = longDate.getFullYear().toString();
-   var mm = (longDate.getMonth()+1).toString();
-   var dd  = longDate.getDate().toString();
-   return yyyy + (mm[1]?mm:"0"+mm[0]) + (dd[1]?dd:"0"+dd[0]);
-// return 'hey';
-    
+	if (longDate){		
+// 		console.log(longDate);
+	   var yyyy = longDate.getFullYear().toString();
+	   var mm = (longDate.getMonth()+1).toString();
+	   var dd  = longDate.getDate().toString();
+	
+	/*
+	var yyyy = '2016';
+	var mm = '11';
+	var dd = '12';
+	*/
+	   
+	   return yyyy + (mm[1]?mm:"0"+mm[0]) + (dd[1]?dd:"0"+dd[0]);
+	// return 'hey';
+    }
 };
 
 daysAgo = function(longDate) {

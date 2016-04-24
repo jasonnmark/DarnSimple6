@@ -14,14 +14,20 @@ Template.contactSearchResults.helpers({
 			console.log('fuzzy match');
 		} else {
 		return someCursor;
-		console.log(someCursor.firstName);
-		console.log('exact match');
 		}
-	console.log(someCursor);
-
 /*
 	console.log(searchString);
 	console.log('testing');
 */
 	}
 });
+
+
+/*
+Example of filter from : http://stackoverflow.com/questions/22028735/filtering-a-collection-in-meteor-js-by-a-date-range-or-word-filter
+Posts.find({
+  category: category,
+  time: {$gte: date1, $lte: date2},
+  text: new RegExp(searchTerm)
+});
+*/

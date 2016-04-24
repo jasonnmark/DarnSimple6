@@ -1,34 +1,26 @@
 simpleDate = function(longDate) {
 	if (longDate){		
-// 		console.log(longDate);
 	   var yyyy = longDate.getFullYear().toString();
 	   var mm = (longDate.getMonth()+1).toString();
 	   var dd  = longDate.getDate().toString();
-	
-	/*
-	var yyyy = '2016';
-	var mm = '11';
-	var dd = '12';
-	*/
-	   
 	   return yyyy + (mm[1]?mm:"0"+mm[0]) + (dd[1]?dd:"0"+dd[0]);
-	// return 'hey';
     }
 };
 
 daysAgo = function(longDate) {
 	var startingDate = simpleDate(longDate);
+/*
     var utcSeconds = 1417903843000;
     var d = new Date(0);   
-    d.setUTCSeconds(Math.round( utcSeconds / 1000.0));
-    
+    d.setUTCSeconds(Math.round( utcSeconds / 1000.0));  
+*/
     if(startingDate === simpleDate(new Date()))
 		{
 			return 'today';
 		} else {
 			return moment(longDate).fromNow();
 		};
-			};
+};
 
 /*
 // SOURCE: http://stackoverflow.com/questions/27323791/round-a-timestamp-to-the-nearest-date

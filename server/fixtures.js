@@ -1,3 +1,19 @@
+if (Players.find().count() === 0) {
+  Players.insert({
+    name: 'John'
+  });
+
+  Players.insert({
+    name: 'Jane'
+  });
+
+  Players.insert({
+    name: 'June'
+  });
+}
+
+
+
 /*
 if (Notes.find().count() === 0) {
   Notes.insert({

@@ -1,0 +1,8 @@
+<template name="contactEasySearchBox">
+    {{> EasySearch.Input index=contactsIndex }}
+    <ul>
+        {{#EasySearch.Each index=contactsIndex }}
+            <li>Name: {{firstName}} / {{lastName}}</li>
+        {{/EasySearch.Each}}
+    </ul>
+</template>

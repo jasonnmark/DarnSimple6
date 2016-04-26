@@ -17,10 +17,5 @@ Template.layout.events({
 });
 */
 
-Template.layout.helpers({
-  playersIndex: () => PlayersIndex
-});
-
-
 
 

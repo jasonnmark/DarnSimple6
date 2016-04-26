@@ -5,7 +5,3 @@ Meteor.publish('notes', function() {
 Meteor.publish('contacts', function() {
   return Contacts.find();
 });
-
-Meteor.publish('players', function() {
-  return Players.find();
-});

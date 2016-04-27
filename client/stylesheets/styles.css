@@ -67,6 +67,7 @@ input[type="text"].add-reminder {
   	padding-top: -10px;
   }
 
+/* NoteList */
 .noteList li {
 	list-style:none;
 }
@@ -91,9 +92,12 @@ input[type="text"].add-reminder {
 	color:orange;
 }
 
+/* Reused for lists */
 .editable:hover {
-	    background-color: #E8F3FF;
-
+	background-color: #E8F3FF;
+}
+.grey {
+	color:grey;
 }
 
 .starred {
@@ -103,6 +107,7 @@ input[type="text"].add-reminder {
 .trashCan {
 	color:grey;
 }
+
 
 /* Lifestream */
     #lifestream {

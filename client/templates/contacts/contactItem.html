@@ -3,7 +3,9 @@
 	    <div class="contactList">
 	      <li class="editable">
 	      
-      <span class="editable"  >{{> editableText collection="contacts" field="firstName"}}</span>  
+      <span class="editable"  >{{> editableText collection="contacts" field="firstName"}} {{> editableText collection="contacts" field="lastName"}}</span> 
+      <span class="grey"> 
+<!--
       contactOwnerID: {{contactOwnerID}} 
       createdAt: {{createdAt}}
       contactOwnerName: {{contactOwnerName}} 
@@ -11,6 +13,9 @@
 	  {{#each emails}}
 	  	email: {{address}}
 	  {{/each}}
+	  combined for search: 
+-->{{seachOnMe}}
+      </span>
 	  	<a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
     	{{#if starred}}
 			<a href="#" class="contactStar starred"><i class="fa fa-star"></i></a>

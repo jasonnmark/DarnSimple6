@@ -1,5 +1,17 @@
 <template name="contactEasySearchBox">
     {{> EasySearch.Input index=contactsIndex }}
+<!--
+    {{#EasySearch.IfInputEmpty index=myIndex}}
+		<div>Start searching!</div>
+	{{/EasySearch.IfInputEmpty}}
+	{{#EasySearch.IfNoResults index=myIndex}}
+		<div>No results found!</div>
+  	{{/EasySearch.IfNoResults}}
+  	{{#EasySearch.IfSearching index=myIndex}}
+  		<div>Searching...</div>
+  	{{/EasySearch.IfSearching}}
+-->
+
     <ul>
         {{#EasySearch.Each index=contactsIndex }}
             <li>Name: {{firstName}} / {{lastName}} / {{seachOnMe}}</li>

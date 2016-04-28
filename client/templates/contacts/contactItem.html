@@ -15,6 +15,18 @@
 	  {{/each}}
 	  combined for search: 
 -->{{seachOnMe}}
+	  {{#each social}}
+	  	social: {{type}}
+	  	{{address}}
+<!-- 	  	{{starred}} -->
+	  	{{#if starred}}
+			<a href="#" class="socialStar starred"><i class="fa fa-star"></i></a>
+		{{else}} 
+    		<a href="#" class="socialStar"><i class="fa fa-star-o"></i></a>
+		{{/if}}
+	  	
+	  {{/each}}
+	  -----
       </span>
 	  	<a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
     	{{#if starred}}

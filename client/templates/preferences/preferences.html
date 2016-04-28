@@ -2,11 +2,11 @@
 <h1>Preferences</h1>
 <!--   <p>{{firstName}}</p> -->
 {{#autoForm id="UserProfileEdit" collection="Meteor.users"  doc=currentUser type="update"}}
-                {{> afQuickField name="username"}}
-                {{> afQuickField name="profile.firstName" placeholder="First Name"}}
-                {{> afQuickField name="profile.lastName" placeholder="Last Name"}}
-                {{> afQuickField name="profile.bio" rows="6"}}
-                {{> afQuickField name="profile.website"}}
+                {{> afQuickField name="username" label=false}}
+                {{> afQuickField name="profile.firstName" placeholder="First Name" label=false}}
+                {{> afQuickField name="profile.lastName" placeholder="Last Name" label=false}}
+                {{> afQuickField name="profile.bio" rows="6" placeholder="Enter Your Bio" rows=5 label=false}}
+                {{> afQuickField name="profile.website" placeholder="Website" label=false}}
                 {{#unless autoSaveMode}}
                 <div class="form-group">
                         <button type="submit" class="btn btn-primary" disabled="{{disableButtons}}">Submit</button>

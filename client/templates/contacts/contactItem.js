@@ -14,6 +14,12 @@ Template.contactItem.events({
 		Contacts.update(this._id, {
 	  		$set: {starred: ! this.starred}
 	  	});
+	},
+	
+	'click .socialStar': function () {
+		Contacts.update(this._id, {
+	  		$set: {starred: ! this.starred}
+	  	});
 	}
 	
 });

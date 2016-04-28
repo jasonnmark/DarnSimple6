@@ -18,11 +18,13 @@ Template.contactItem.events({
 	
 	'click .socialStar': function () {
 		Contacts.update(this._id, {
-	  		$set: {starred: ! this.starred}
-// 	  		$set: {starred: true}
+			$set: {starred: false}
+// 	  		$set: {starred: ! this.starred}
+
 	   	});
 // 	   	console.log("star clicked");
 	   	console.log(this);
+	   	console.log(this.starred);
 	}
 	
 });
@@ -38,7 +40,6 @@ Template.contactItem.helpers({
 	    	return 'fa-linkedin';
 	    case 'Instagram':
 	    	return 'fa-instagram';
-	}
-    
+	} 
   }
 });

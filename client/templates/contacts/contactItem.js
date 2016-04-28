@@ -19,8 +19,26 @@ Template.contactItem.events({
 	'click .socialStar': function () {
 		Contacts.update(this._id, {
 	  		$set: {starred: ! this.starred}
-	  	});
+// 	  		$set: {starred: true}
+	   	});
+// 	   	console.log("star clicked");
+	   	console.log(this);
 	}
 	
 });
 
+Template.contactItem.helpers({
+  socialIcon: function() {
+    switch (this.type) {
+	    case 'Twitter':
+	        return 'fa-twitter';
+	    case 'Facebook':
+	    	return 'fa-facebook';
+	    case 'LinkedIn':
+	    	return 'fa-linkedin';
+	    case 'Instagram':
+	    	return 'fa-instagram';
+	}
+    
+  }
+});

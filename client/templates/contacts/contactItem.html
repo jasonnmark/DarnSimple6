@@ -16,7 +16,7 @@
 	  combined for search: 
 -->{{seachOnMe}}
 	  {{#each social}}
-	  	social: {{type}}
+	  	<i class="fa {{socialIcon}}"></i>
 	  	{{address}}
 <!-- 	  	{{starred}} -->
 	  	{{#if starred}}
@@ -24,6 +24,8 @@
 		{{else}} 
     		<a href="#" class="socialStar"><i class="fa fa-star-o"></i></a>
 		{{/if}}
+	  	
+<!-- 	  	editme: {{> editableText collection="contacts" field="address"}} -->
 	  	
 	  {{/each}}
 	  -----

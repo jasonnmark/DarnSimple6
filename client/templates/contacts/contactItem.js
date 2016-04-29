@@ -18,6 +18,8 @@ Template.contactItem.events({
 	
 	'click .socialStar': function () {
 		Contacts.update(this._id, {
+			
+			// Is this a problem because it's a subarray?
 			$set: {starred: false}
 // 	  		$set: {starred: ! this.starred}
 

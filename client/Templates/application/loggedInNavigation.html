@@ -28,8 +28,7 @@
 	            </li>
 	          </ul>
 			  <ul class="nav navbar-nav navbar-right">
-<!-- 				<li><a class="navbar-brand" href="index.html">DARN SIMPLE</a></li> -->
-	            <li class="dropdown">
+	            <li class="dropdown hidden-xs hidden-sm hidden-md">
 	              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://gravatar.com/avatar/8f29b038cba2a4339364bf8e345461eb?s=30" class="gravatar"> <span class="glyphicon glyphicon-cog"></span></a>
 	              <ul class="dropdown-menu">
 		            <li><a href="#">Invite Teammate</a></li>
@@ -39,9 +38,18 @@
 	                <li><a href="#">Support</a></li>
 	                <li><a href="#">Upgrade</a></li>
 	                <li role="separator" class="divider"></li>
+	                <li><button type="button" id="logout" class="btn btn-link">Log Out</button></li>
 	              </ul>
-	              <li><button type="button" id="logout" class="btn-sm">Log Out</button></li>
 	            </li>
+            	<li class="visible-xs visible-sm visible-md"><a href="#">Invite Teammate</a></li>
+				<li class="visible-xs visible-sm visible-md"><a href="#">Manage Team</a></li>
+	            <li role="separator" class="divider visible-xs visible-sm visible-md"></li>
+				<li class="visible-xs visible-sm visible-md"><a href="{{pathFor 'preferences'}}">Preferences</a></li>
+				<li class="visible-xs visible-sm visible-md"><a href="#">Support</a></li>
+				<li class="visible-xs visible-sm visible-md"><a href="#">Upgrade</a></li>
+				<li role="separator" class="divider visible-xs visible-sm visible-md"></li>
+				<li><button type="button" id="logout" class="btn btn-link visible-xs visible-sm visible-md">Log Out</button></li>
+
 	          </ul>
         </div><!--/.nav-collapse -->
       </div>

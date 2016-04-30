@@ -2,8 +2,7 @@ Template.noteItem.events({
 	"click .toggleIsItDone": function () {
 	  	Notes.update(this._id, {
 	  		$set: {isItDone: ! this.isItDone}
-	  	});
-	  	
+	  	});	
 	},
 	
 	'click .delete': function(e) {
@@ -19,7 +18,6 @@ Template.noteItem.events({
       return Session.set("target" + t.data._id, true);
       
     },
-	
 	
 	'submit form': function(e) {
 	    e.preventDefault();

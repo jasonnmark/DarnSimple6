@@ -24,7 +24,6 @@ var hooksObject = {
 AutoForm.addHooks('addContactsForm', {
   onSubmit: function(insertDoc, updateDoc, currentDoc){
 	  
-	  
 	    //Do some custom async js here as required,
   //Then I call my meteor method directly from obSubmit hook
   Meteor.call("addPost", insertDoc, function (error, post) {});

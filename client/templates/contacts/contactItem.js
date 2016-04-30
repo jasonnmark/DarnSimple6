@@ -21,15 +21,36 @@ Template.contactItem.events({
 			
 			// Is this a problem because it's a subarray?
 			$set: {starred: false}
+// 			social.$.starred
 // 	  		$set: {starred: ! this.starred}
 
 	   	});
 // 	   	console.log("star clicked");
 	   	console.log(this);
 	   	console.log(this.starred);
-	}
+	},
+
+/*
+	'change update[name=firstName]': function(event, contactItem){
+		Contacts.update(this._id, {
+			$set: {searchOnMe: "jason wuz here"}
+	   	});
+	   	alert("hey!");
+  	}
+*/
 	
 });
+
+/*
+Template.form.events({
+	'change update[name=firstName]': function(event, contactItem){
+		Contacts.update(this._id, {
+			$set: {searchOnMe: "jason wuz here"}
+	   	});
+	   	alert("hey!");
+	}
+});
+*/
 
 Template.contactItem.helpers({
   socialIcon: function() {

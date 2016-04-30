@@ -41,7 +41,7 @@ Template.noteItem.events({
 		Notes.update(this._id, {
 	  		$set: {starred: ! this.starred}
 	  	});
-	},	
+	}
 });
 
 

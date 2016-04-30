@@ -6,6 +6,6 @@ Template.loggedInNavigation.events({
 Template.loggedInNavigation.helpers({
 	reminderCount: function(){
 // 		return 15;
-		return Notes.find({isItDone: {$ne: true} }).count()
+		return Notes.find({isItDone: {$ne: true},starred: true}).count()
 	}
 });

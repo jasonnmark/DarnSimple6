@@ -38,6 +38,7 @@ kadira:react-layout
 comerc:autoform-contenteditable2
 babrahams:editable-text
 alanning:roles
+<<<<<<< Updated upstream
 perak:fuzzy-search
 momentjs:moment
 easy:search
@@ -47,3 +48,6 @@ cfs:standard-packages
 mpowaga:jquery-fileupload
 yogiben:autoform-tags
 ajduke:bootstrap-tagsinput
+=======
+easy:search
+>>>>>>> Stashed changes

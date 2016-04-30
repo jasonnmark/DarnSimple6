@@ -43,3 +43,5 @@ momentjs:moment
 easy:search
 yogiben:autoform-file
 cfs:ui
+cfs:standard-packages
+mpowaga:jquery-fileupload

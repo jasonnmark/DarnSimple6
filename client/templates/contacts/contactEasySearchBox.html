@@ -12,9 +12,26 @@
   	{{/EasySearch.IfSearching}}
 -->
 
+{{#EasySearch.IfInputEmpty index=contactsIndex}}
+
+autosuggest here:
+<div class="autosuggest-component">
+  {{> EasySearch.Autosuggest index=contactsIndex}}
+</div>
+
+<!--   <div>Start searching!</div> -->
+  {{else}}
     <ul>
         {{#EasySearch.Each index=contactsIndex }}
-            <li>Name: {{firstName}} / {{lastName}} / {{seachOnMe}}</li>
+            <li>Name: {{firstName}} / {{lastName}} / {{searchOnMe}}</li>
         {{/EasySearch.Each}}
+        {{> EasySearch.LoadMore index=contactsIndex content="Load more content"}}
+
     </ul>
+  
+{{/EasySearch.IfInputEmpty}}
+
+
+
+    
 </template>

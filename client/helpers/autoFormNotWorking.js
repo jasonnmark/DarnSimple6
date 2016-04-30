@@ -19,6 +19,31 @@ var hooksObject = {
 };
 */
 
+// Doesn't work on form type "insert", only on Normal, but when I use normal I can't get it to submit.
+
+AutoForm.addHooks('addContactsForm', {
+  onSubmit: function(insertDoc, updateDoc, currentDoc){
+	  
+	  
+	    //Do some custom async js here as required,
+  //Then I call my meteor method directly from obSubmit hook
+  Meteor.call("addPost", insertDoc, function (error, post) {});
+  //reset the form.
+  AutoForm.resetForm('formId');
+  return false;
+  
+  
+// 	    PeopleSchema.clean(doc);
+// 	    console.log("People doc with auto values", doc);
+//         this.done();
+
+//         this.event.preventDefault();
+//         console.log('before update call');
+//         alert("testing");
+//         return false;
+	
+  }
+});
 
 /*
 AutoForm.addHooks('addContactsForm', hooksObject);

@@ -3,7 +3,7 @@
 	    <div class="contactList">
 	      <li class="editable">
 	      
-      <span class="editable"  >{{> editableText collection="contacts" field="firstName"}} {{> editableText collection="contacts" field="lastName"}}</span> 
+      <span class="editable {{#if archived}}archived{{/if}}"  >{{> editableText collection="contacts" field="firstName"}} {{> editableText collection="contacts" field="lastName"}}</span> 
       <span class="grey"> 
 <!--
       contactOwnerID: {{contactOwnerID}} 

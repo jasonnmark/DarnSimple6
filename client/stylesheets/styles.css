@@ -92,6 +92,10 @@ input[type="text"].add-reminder {
 	color:orange;
 }
 
+.archived {
+	text-decoration: line-through;
+}
+
 /* Reused for lists */
 .editable:hover {
 	background-color: #E8F3FF;

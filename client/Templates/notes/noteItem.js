@@ -59,6 +59,8 @@ Template.noteItem.helpers({
 		
 	},
 	daysFromNow: function() {
-		return daysAgo(this.dueDate);
+		if (this.dueDate){
+			return daysAgo(this.dueDate);
+		};
 	}
 });

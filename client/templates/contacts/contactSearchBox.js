@@ -1,10 +1,10 @@
 Template.contactSearchBox.events({
 	
 	'submit #contactSearch': function(e){
-			e.preventDefault();
-			console.log(this);
-			searchString = this._id;
-			console.log(searchString);
+		e.preventDefault();
+		console.log(this);
+		searchString = document.getElementById("srchterm").value;
+		console.log(searchString);
 
 // document.getElementById("contactSearch").submit();
 

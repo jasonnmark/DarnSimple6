@@ -1,7 +1,12 @@
 <template name="dashboard">
-	{{> contactEasySearchBox}}
+	<h2>Contacts</h2>
+<!-- 	{{> contactEasySearchBox}} -->
+	{{> contactList}}
+<!--
+	// Fuzzy Search
 	{{> contactSearchBox}}
 	{{> contactSearchResults}}
+-->
 	
 	<form action="{{pathFor 'contactAdd'}}">
     	<input type="submit" class="btn btn-success" value="Add Contact">
@@ -12,8 +17,7 @@
 	
 	{{> noteSubmit}}
 	{{> noteList}}
-	<h2>Contacts</h2>
-	{{> contactList}}
+
 	
 	
 </template>

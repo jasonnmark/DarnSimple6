@@ -1,4 +1,7 @@
 <template name="contactList">
+	<div class="autosuggest-component">
+	  {{> EasySearch.Autosuggest index=contactsIndex}}
+	</div>
    <div class="contactList">
     {{#each contacts}}
       {{> contactItem}}

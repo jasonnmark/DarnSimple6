@@ -1,4 +1,10 @@
 <template name="noteList">
+	<label class="hide-completed">
+        <input type="checkbox"/>
+<!--    <input type="checkbox" checked/> -->
+        Hide Completed Tasks
+    </label>
+
    <div class="noteList">
     {{#each notes}}
       {{> noteItem}}

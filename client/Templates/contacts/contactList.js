@@ -49,9 +49,18 @@ Template.contactEasySearchBox.helpers({
 */
 
 Template.contactList.events({
+	"submit .selectize-input input" (event, instance) {
+    	instance.state.set('searchString', event.target.value);
+// 		console.log("change");
+		console.log(instance.state.get('searchString'));
+	},
+
+/*
+Template.contactList.events({
 	"keyup .selectize-input input" (event, instance) {
     	instance.state.set('searchString', event.target.value);
 // 		console.log("change");
 		console.log(instance.state.get('searchString'));
 	},
+*/
 });

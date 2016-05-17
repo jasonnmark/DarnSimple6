@@ -1,0 +1,22 @@
+<template name="contactTypeahead">
+	<div class="autosuggest-component">
+		
+<input class="form-control typeahead" name="repo" type="text"
+       placeholder="open source projects by Twitter"
+       autocomplete="off" spellcheck="off"
+       data-source="contacts" data-template="repo"/>
+		
+<!-- 	  {{> EasySearch.Autosuggest index=contactsIndex class="contactSearch" id="contactSearch" placeholder="Find or Add Contacts"}} -->
+	</div>
+   <div class="contactList">
+    {{#each contacts}}
+      {{> contactItem}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="repo">
+       <p class="repo-language">{{language}}</p>
+       <p class="repo-name">{{name}}</p>
+       <p class="repo-description">{{description}}</p>
+</template>

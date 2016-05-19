@@ -1,3 +1,4 @@
+/*
 Meteor.publish('notes', function() {
   return Notes.find();
 });
@@ -9,4 +10,5 @@ Meteor.publish('userProfile', function() {
 Meteor.publish('contacts', function() {
   return Contacts.find();
 });
+*/
 

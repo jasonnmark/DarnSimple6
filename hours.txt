@@ -2,4 +2,4 @@ Date	Min	Notes
 ???		??	Earlier hours from tracker
 ???		??	Where did I save that?
 5/19	25	CoffeeScript Conversion
-5/20	5	CoffeeScript Conversion
+5/20	55	CoffeeScript Conversion

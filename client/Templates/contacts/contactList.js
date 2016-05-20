@@ -1,3 +1,4 @@
+// Won't convert to coffee
 Template.contactList.onCreated(function contactListOnCreated() {
   this.state = new ReactiveDict();
 });

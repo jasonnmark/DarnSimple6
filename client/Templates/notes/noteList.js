@@ -1,3 +1,5 @@
+// Can't convert to Coffeescript
+
 // Temporary UI state
 // https://www.meteor.com/tutorials/blaze/temporary-ui-state
 

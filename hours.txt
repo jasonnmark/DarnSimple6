@@ -4,3 +4,4 @@ Date	Min	Notes
 5/19	25	CoffeeScript Conversion
 5/20	55	CoffeeScript Conversion
 5/21  30  CoffeeScript Conversion
+5/21	30	Keypress on hover

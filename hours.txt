@@ -5,3 +5,4 @@ Date	Min	Notes
 5/20	55	CoffeeScript Conversion
 5/21  30  CoffeeScript Conversion
 5/21	30	Keypress on hover
+5/21	45	Color coding hashtags

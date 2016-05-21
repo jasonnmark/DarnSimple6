@@ -57,6 +57,20 @@ Template.noteItem.helpers({
     if (this.dueDate) {
       return daysAgo(this.dueDate);
     }
+  },
+  noteTextParsed: function () {
+// 	  return (this.title);
+		var startingText = (this).title;
+		var hashtagged = startingText.replace(/#[a-z0-1A-Z]+/g, '<span class="hashtag">$&</span>');
+		var parsed = hashtagged.replace(/@[a-z0-1A-Z]+/g, '<span class="personlink">$&</span>');
+	  return (parsed);
+	  
+// 	  $('note').each(function() {
+/*
+    $(this).html($(this).text()
+                .replace(/#[a-z0-1A-Z]+/g, '<span style="color: red;">$&</span>'));
+*/
+// });
   }
 });
 

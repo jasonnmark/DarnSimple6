@@ -92,6 +92,14 @@ input[type="text"].add-reminder {
 	color:orange;
 }
 
+.hashtag{
+	color:purple;
+}
+
+.personlink {
+	color:blue;
+}
+
 .archived {
 	text-decoration: line-through;
 }

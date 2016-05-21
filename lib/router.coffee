@@ -41,3 +41,11 @@ Router.route "contactAdd",
   name: "contactAdd"
   
 
+Router.route "/notes/:tag",
+  name: "noteList"
+  waitOn: ->
+    Meteor.subsribe "notesByTag", @params.tag
+
+  data: ->
+    Notess.find tags: @params.tag
+

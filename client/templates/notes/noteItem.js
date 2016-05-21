@@ -35,6 +35,18 @@ Template.noteItem.events({
       }
     });
   },
+
+
+/*
+  "click .hashtag": function() {
+// Demo here: http://jsfiddle.net/tpL4M/1/
+// This happens more the more you click on it.. some sort of bug.
+	 	$('span.hashtag').click(function(){
+    	var t = $(this).text();
+    	console.log(this);
+			alert(t);
+		});
+  },
   "click .noteStar": function() {
     return Notes.update(this._id, {
       $set: {
@@ -42,7 +54,9 @@ Template.noteItem.events({
       }
     });
   }
+  */
 });
+
 Template.noteItem.helpers({
   dateColor: function() {
     if (simpleDate(this.dueDate) < simpleDate(new Date())) {
@@ -61,7 +75,7 @@ Template.noteItem.helpers({
   noteTextParsed: function () {
 // 	  return (this.title);
 		var startingText = (this).title;
-		var hashtagged = startingText.replace(/#[a-z0-1A-Z]+/g, '<span class="hashtag">$&</span>');
+		var hashtagged = startingText.replace(/#[a-z0-1A-Z]+/g, '<span class="hashtag"  onclick="clickHashtag((this.textContent || this.innerText))">$&</span>');
 		var parsed = hashtagged.replace(/@[a-z0-1A-Z]+/g, '<span class="personlink">$&</span>');
 	  return (parsed);
 	  

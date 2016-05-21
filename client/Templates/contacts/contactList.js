@@ -16,8 +16,7 @@ Template.contactList.helpers({
    const instance = Template.instance();
 //  var searchString = instance.state.get('searchString');
    if (instance.state.get('searchString')) {
-	  // return results based on what's typed so far
-	  
+	  // return results based on what's typed so far  
       return Contacts.find({searchOnMe: instance.state.get('searchString')}, {sort: {archived: 1, starred: -1, firstName: 1, lastName: 1}});
     }
     // Otherwise, return starred contacts

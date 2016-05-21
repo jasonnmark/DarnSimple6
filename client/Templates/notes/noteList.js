@@ -17,7 +17,9 @@ Template.noteList.helpers({
       return Notes.find({ isItDone: { $ne: true } }, { sort: { createdAt: -1 } });
     }
     // Otherwise, return all of the tasks
-    return Notes.find({}, {sort: {dueDate: 1, starred: -1, title:1}});
+    return Notes.find({
+// 	    "starred": this.params.starred	    
+    }, {sort: {dueDate: 1, starred: -1, title:1}});
   },
   
 });

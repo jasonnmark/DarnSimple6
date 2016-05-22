@@ -1,29 +1,56 @@
-Avatar.options = {
-  fallbackType: 'initials',
-  gravatarDefault: 'identicon'
-  //defaultImageUrl: 'img/avatar.jpg'
-};
+/*
+Template.avatar.helpers({
 
-Template.avatarTemplate.helpers({
-    users: function () {
-      return Meteor.users.find().fetch();
-    },
-    service: function (user) {
-      if      (user && user.services && user.services.twitter)   { return 'twitter'; }
-      else if (user && user.services && user.services.facebook)  { return 'facebook'; }
-      else if (user && user.services && user.services.google)    { return 'google'; }
-      else if (user && user.services && user.services.github)    { return 'github'; }
-      else if (user && user.services && user.services.instagram) { return 'instagram'; }
-      else                                                       { return 'none'; }
-    },
-    name: function (user) {
-      var name = '';
-      if (user && user.profile && user.profile.name) {
-        name = user.profile.name;
+  cssClassPrefix: function () {
+    return Avatar.getCssClassPrefix();
+  },
+
+  size: function () {
+    return sizeClass(this);
+  },
+
+  shape: function () {
+    return shapeClass(this)
+  },
+
+  class: function () {
+    return customClasses(this);
+  },
+
+  imageUrl: function () {
+    var user = this.user ? this.user :
+        this.userId ? Meteor.users.findOne(this.userId) : null;
+    var url = Avatar.getUrl(user); // reactive
+    if (url && url.trim() !== '' && Template.instance().firstNode) {
+      var img = Template.instance().find('img');
+      if (img.src !== url.trim()) {
+        img.style.removeProperty('display');
       }
-      else if (user && user.username) {
-        name = user.username;
-      }
-      return name;
     }
-  });
+    return url;
+  },
+
+  initialsCss: function () {
+    var user = this.user ? this.user : Meteor.users.findOne(this.userId);
+    var css = '';
+
+    var backgroundColorProperty = 'background-color: ';
+    if (this.bgColor) backgroundColorProperty += this.bgColor;
+    else backgroundColorProperty += Avatar.getBackgroundColor(user);
+    css += backgroundColorProperty + ';';
+
+    var textColorProperty = 'color: ';
+    if (this.txtColor) textColorProperty += this.txtColor;
+    else textColorProperty += Avatar.getTextColor(user);
+    css += textColorProperty + ';';
+
+    return css;
+  },
+
+  initialsText: function () {
+    var user = this.user ? this.user : Meteor.users.findOne(this.userId);
+    return initialsText(user, this);
+  }
+
+});
+*/

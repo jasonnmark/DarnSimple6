@@ -107,6 +107,7 @@ momentjs:moment@2.12.0
 mongo@1.1.6
 mongo-id@1.0.3
 mongo-livedata@1.0.11
+mousetrap:mousetrap@1.4.6_1
 mpowaga:jquery-fileupload@9.11.2
 mpowaga:jquery-ui-widget@1.11.4
 npm-bcrypt@0.7.8_2

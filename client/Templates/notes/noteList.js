@@ -4,29 +4,26 @@
 // https://www.meteor.com/tutorials/blaze/temporary-ui-state
 
 Template.noteList.helpers({
-/*
-  notes: function() {
-    return Notes.find({}, {sort: {dueDate: 1, starred: -1, title:1}});
-  }
-*/
-  
   notes() {
     const instance = Template.instance();
     if (instance.state.get('hideCompleted')) {
       // If hide completed is checked, filter tasks
       return Notes.find({ isItDone: { $ne: true } }, { sort: { createdAt: -1 } });
     }
-    // Otherwise, return all of the tasks
-    return Notes.find({
-// 	    "starred": this.params.starred	    
+    	// Otherwise, return all of the tasks
+    	return Notes.find({
     }, {sort: {dueDate: 1, starred: -1, title:1}});
   },
-  
 });
+
+
+
 
 Template.noteList.onCreated(function noteListOnCreated() {
   this.state = new ReactiveDict();
 });
+
+
 
 
 Template.noteList.events({
@@ -37,16 +34,13 @@ Template.noteList.events({
 
 	},
 	
-/*
-// Example from noteItem.js
-	
-	"click .toggleIsItDone": function () {
-	  	Notes.update(this._id, {
-	  		$set: {isItDone: ! this.isItDone}
-	  	});	
+	"hover .note"(){
+		console.log(this);
+		Mousetrap.bind('s', () => {
+			console.log('starred'); 
+		});
 	},
-*/
-
+	
 });
 
 

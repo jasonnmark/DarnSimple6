@@ -52,3 +52,4 @@ matb33:collection-hooks
 reactive-dict
 sergeyt:typeahead
 coffeescript
+mousetrap:mousetrap

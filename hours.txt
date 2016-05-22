@@ -7,3 +7,4 @@ Date	Min	Notes
 5/21	30	Keypress on hover
 5/21	45	Color coding hashtags
 5/21	30	Routing and search results in URL
+5/22	120	Exploring Trello-knock-off and quickkeys

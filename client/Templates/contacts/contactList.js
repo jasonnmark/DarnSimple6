@@ -5,6 +5,10 @@ Template.contactList.onCreated(function contactListOnCreated() {
 
 
 Template.contactList.helpers({
+	
+	inputAttributes: function () { return { class: 'easy-search-input', name: 'contactSearch' }; },
+	
+	
   contactsIndex: () => ContactsIndex,
 	
 /*
@@ -34,9 +38,7 @@ Template.contactList.helpers({
     // Otherwise, return all of the tasks
     return Notes.find({}, {sort: {dueDate: 1, starred: -1, title:1}});
   },
-*/
-    
-    
+*/    
    
 });
 

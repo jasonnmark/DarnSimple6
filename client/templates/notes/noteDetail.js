@@ -1,4 +1,4 @@
-Template.noteItem.events({
+Template.noteDetail.events({
   "click .toggleIsItDone": function() {
     return Notes.update(this._id, {
       $set: {
@@ -57,7 +57,7 @@ Template.noteItem.events({
   */
 });
 
-Template.noteItem.helpers({
+Template.noteDetail.helpers({
   dateColor: function() {
     if (simpleDate(this.dueDate) < simpleDate(new Date())) {
       return "overdue";
@@ -67,10 +67,12 @@ Template.noteItem.helpers({
       }
     }
   },
-  noteID: function() {
-        return this._id;
+  
+  whoAmI: function(){
+  	console.log(this);
+//   	return this;
   },
-
+  
   daysFromNow: function() {
     if (this.dueDate) {
       return daysAgo(this.dueDate);

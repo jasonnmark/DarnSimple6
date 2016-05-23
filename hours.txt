@@ -10,3 +10,4 @@ Date	Min	Notes
 5/22	140	Exploring Trello-knock-off and quickkeys
 5/22	20	Avatars
 5/23	30	Assorted Cleanup
+5/23	120	Search and cleanup

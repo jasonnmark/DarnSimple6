@@ -55,6 +55,26 @@ Template.contactList.events({
 		console.log(instance.state.get('searchString'));
 	},
 
+
+	'submit form': function(event){
+		event.preventDefault();
+    var contactSearch = event.target.contactSearch.value;
+    console.log(contactSearch);
+/*
+    var contactId = function(){
+	    	return Notes.findOne(searchOnMe:contactSearch);
+	    }
+*/
+    // 	    var contactID = Meteor.Contacts.findOne({searchOnMe:contactSearch});
+     var contactFound = Contacts.findOne({"searchOnMe":contactSearch});
+     console.log(contactFound);
+/*
+     var contactID= contactName._id
+		 console.log(contactID);
+*/
+    Router.go('contactDetail', contactFound);
+	},
+
 /*
 Template.contactList.events({
 	"keyup .selectize-input input" (event, instance) {

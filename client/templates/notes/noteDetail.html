@@ -1,10 +1,9 @@
-<template name="noteItem">
-  <div class="note">	   
-	    <div class="noteList">
+<template name="noteDetail">
+  <div class="noteDetail">	   
 	      <li class="{{#if isItDone}}checked{{/if}} editable">
 		  	<input type="checkbox" checked="{{isItDone}}" class="toggleIsItDone" />
 	      
-      <span class="text {{#if isItDone}}noteDone{{/if}} editNote editable"  >{{> editableText collection="notes" field="title"}}{{{noteTextParsed}}} {{noteID}}</span>  
+      <span class="text {{#if isItDone}}noteDone{{/if}} editNote editable"  >{{> editableText collection="notes" field="title"}}{{{noteTextParsed}}}</span>  
       <span  class="noteEdit {{dateColor}}"  >{{daysFromNow}}</span> 
   {{#if starred}}
   	<a href="#" class="noteStar starred"><i class="fa fa-star"></i></a>
@@ -13,13 +12,7 @@
   {{/if}}
 		  <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
 		  </li>
-	    </div>
     </div>
-	         
+    
 </template>
 
-
-<!--
-using other plug: meteor remove lbee:moment-helpers
-{{moFromNow dueDate withoutSuffix}}
--->

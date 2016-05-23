@@ -13,7 +13,7 @@
 		  </form>
 		</div>
 		<div class="contactSearchAutoSuggest">{{#EasySearch.Each index=contactsIndex}}
-		      <li><a href="{{pathFor 'contactDetail'}}">{{firstName}} {{lastName}} {{organization}}</a> {{#if starred}}
+		      <li><a href="{{pathFor 'contactDetail'}}" class="contactFindClick">{{firstName}} {{lastName}} {{organization}}</a> {{#if starred}}
 						<span class="socialStar starred"><i class="fa fa-star"></i></span>
 					{{/if}}</li>
 		    {{/EasySearch.Each}}</div>

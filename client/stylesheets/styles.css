@@ -133,9 +133,11 @@ input[type="text"].add-reminder {
 	z-index: 100;
 }
 
+/*
 div:empty {
    display: none;
 }
+*/
 
 /* Lifestream */
     #lifestream {

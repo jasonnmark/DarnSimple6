@@ -51,7 +51,7 @@ Template.contactEasySearchBox.helpers({
 */
 
 Template.contactSearch.events({
-	"submit .selectize-input input" (event, instance) {
+	'submit .selectize-input input' (event, instance) {
     	instance.state.set('searchString', event.target.value);
 // 		console.log("change");
 		console.log(instance.state.get('searchString'));
@@ -60,7 +60,9 @@ Template.contactSearch.events({
 
 	'submit form': function(event){
 		event.preventDefault();
-    var contactSearch = event.target.contactSearch.value;
+//     var contactSearch = event.target.contactSearch.value;
+// Use JQuery because it's more robust and produces less bugs.
+    var contactSearch = $('[name="contactSearch"]').val();
     console.log(contactSearch);
 /*
     var contactId = function(){
@@ -75,6 +77,14 @@ Template.contactSearch.events({
 		 console.log(contactID);
 */
     Router.go('contactDetail', contactFound);
+    // clears field
+    $('[name="contactSearch"]').val('');
+    
+	},
+	
+	'click .contactFindClick': function(event){
+		$('[name="contactSearch"]').val('');
+		console.log("clicked");
 	},
 
 /*

@@ -15,13 +15,11 @@ Template.noteList.helpers({
       	{ 
 	      	$or: [
 		      	{isItDone: { $ne: true } },
-		      	{title: "number"} 	
+		      	{title: "another"} 	
 	      	]
 	    	}, 
 	    	{ sort: { createdAt: -1 } }
 	    );
-
-
   },
 });
 
@@ -62,9 +60,6 @@ Template.noteList.onCreated(function noteListOnCreated() {
 Template.noteList.events({
 	"change .show-completed input" (event, instance) {
     	instance.state.set('showCompleted', event.target.checked);
-		console.log("click");
-		console.log(instance.state.get('showCompleted'));
-
 	},
 	
 	"hover .note"(){

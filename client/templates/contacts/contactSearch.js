@@ -1,26 +1,88 @@
+// Won't convert to coffee
+Template.contactSearch.onCreated(function contactListOnCreated() {
+  this.state = new ReactiveDict();
+});
+
+
 Template.contactSearch.helpers({
-  
- 	contacts: function() {
-		var searchString = "ema"; 	
-		var someCursor = Contacts.find({ firstName: searchString });
-		if(someCursor.count() == 0)
-		{
-		    // expose entire collection
-		    var tempCursor = Contacts.find({ }, { firstName: true });
-		    // find most similar string
-		    var bestWord = mostSimilarString(tempCursor, "firstName", searchString, -1, false);
-		    var someCursor = Contacts.find({ firstName: mostSimilarString });
-			console.log(bestWord);
-		} else {
-		console.log(someCursor.firstName);
-		}
-	console.log(someCursor);
-	return Contacts.find({ firstName: 'Max' });
- 
+	
+	inputAttributes: function () { return { class: 'easy-search-input form-control', name: 'contactSearch', placeholder: 'Add or Find Contacts' }; },
+	
+	
+  contactsIndex: () => ContactsIndex,
+	
 /*
-	console.log(searchString);
-	console.log('testing');
+  contacts: function() {
+    return Contacts.find({}, {sort: {archived: 1, starred: -1, firstName: 1, lastName: 1}});
 */
-	}
-  
+
+  contacts() {
+   const instance = Template.instance();
+//  var searchString = instance.state.get('searchString');
+   if (instance.state.get('searchString')) {
+	  // return results based on what's typed so far  
+      return Contacts.find({searchOnMe: instance.state.get('searchString')}, {sort: {archived: 1, starred: -1, firstName: 1, lastName: 1}});
+    }
+    // Otherwise, return starred contacts
+    return Contacts.find({}, {sort: {archived: 1, starred: -1, firstName: 1, lastName: 1}});
+	
+  },
+
+/*
+  notes() {
+    const instance = Template.instance();
+    if (instance.state.get('hideCompleted')) {
+      // If hide completed is checked, filter tasks
+      return Notes.find({ isItDone: { $ne: true } }, { sort: { createdAt: -1 } });
+    }
+    // Otherwise, return all of the tasks
+    return Notes.find({}, {sort: {dueDate: 1, starred: -1, title:1}});
+  },
+*/    
+   
+});
+
+// 		var someCursor = Contacts.find({ firstName: searchString });
+
+/*
+Template.contactEasySearchBox.helpers({
+  contactsIndex: () => ContactsIndex
+});
+*/
+
+Template.contactSearch.events({
+	"submit .selectize-input input" (event, instance) {
+    	instance.state.set('searchString', event.target.value);
+// 		console.log("change");
+		console.log(instance.state.get('searchString'));
+	},
+
+
+	'submit form': function(event){
+		event.preventDefault();
+    var contactSearch = event.target.contactSearch.value;
+    console.log(contactSearch);
+/*
+    var contactId = function(){
+	    	return Notes.findOne(searchOnMe:contactSearch);
+	    }
+*/
+    // 	    var contactID = Meteor.Contacts.findOne({searchOnMe:contactSearch});
+     var contactFound = Contacts.findOne({"searchOnMe":contactSearch});
+     console.log(contactFound);
+/*
+     var contactID= contactName._id
+		 console.log(contactID);
+*/
+    Router.go('contactDetail', contactFound);
+	},
+
+/*
+Template.contactList.events({
+	"keyup .selectize-input input" (event, instance) {
+    	instance.state.set('searchString', event.target.value);
+// 		console.log("change");
+		console.log(instance.state.get('searchString'));
+	},
+*/
 });

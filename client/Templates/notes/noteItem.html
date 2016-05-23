@@ -12,6 +12,16 @@
     <a href="#" class="noteStar"><i class="fa fa-star-o"></i></a>
   {{/if}}
 		  <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
+<!--
+	Autocomplete: {{> inputAutocomplete settings=settings id="msg" class="input-xlarge" placeholder="Chat..."}}
+	
+-->
+<!--
+	    {{#textareaAutocomplete settings=settings id="msg"}}
+        {{title}}
+    {{/textareaAutocomplete}}
+-->
+    
 		  </li>
 	    </div>
     </div>
@@ -22,4 +32,10 @@
 <!--
 using other plug: meteor remove lbee:moment-helpers
 {{moFromNow dueDate withoutSuffix}}
+-->
+
+<!--
+<template name="userPill">
+    <span class="label">{{username}}</span>
+</template>
 -->

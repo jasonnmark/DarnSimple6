@@ -89,6 +89,35 @@ Template.noteItem.helpers({
                 .replace(/#[a-z0-1A-Z]+/g, '<span style="color: red;">$&</span>'));
 */
 // });
+  },
+  
+/*
+  //autocomplete Javascript: https://github.com/mizzao/meteor-autocomplete
+  
+  settings: function() {
+    return {
+      position: "top",
+      limit: 5,
+      rules: [
+        {
+          token: '@',
+          collection: Meteor.Contacts,
+          field: "searchOnMe",
+          template: Template.userPill
+        },
+        {
+          token: '!',
+          collection: Dataset,
+          field: "_id",
+          options: '',
+          matchAll: true,
+          filter: { type: "autocomplete" },
+          template: Template.dataPiece
+        }
+      ]
+    };
   }
+*/
+  
 });
 

@@ -47,6 +47,8 @@ Template.noteItem.events({
 			alert(t);
 		});
   },
+*/
+    
   "click .noteStar": function() {
     return Notes.update(this._id, {
       $set: {
@@ -54,7 +56,7 @@ Template.noteItem.events({
       }
     });
   }
-  */
+
 });
 
 Template.noteItem.helpers({

@@ -1,14 +1,41 @@
 <template name="contactSearchBox">
-	<form class="navbar-form contactSearch" role="search" id="contactSearch">
-	        <div class="input-group">
-	            <input type="input" class="form-control" placeholder="Add or Find Contacts" name="srchterm" id="srchterm">
-	            <div class="input-group-btn">
-	                <button class="btn btn-success contactSearch" type="button" data-toggle="modal" data-target="#add-search"><i class="glyphicon glyphicon-search"></i></button>
-	            </div>
-	            
-	<!-- 			From example	 -->
-	<!--             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#add-search">Open Modal</button> -->
-	
-	        </div>
-	</form>
+
+<!-- {name:'contactSearch'} -->
+	<div class="contactSearch">
+		<div class="contactSearchForm">
+		  <form class="navbar-form" role="search">
+			  <div class="input-group">
+			  	{{> EasySearch.Input index=contactsIndex attributes=inputAttributes noDocumentsOnEmpty=true}}
+			  	<div class="input-group-btn">
+				    <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-search"></i></button>
+			  	</div>
+			  </div>
+		  </form>
+		</div>
+		<div class="contactSearchAutoSuggest">{{#EasySearch.Each index=contactsIndex}}
+		      <li><a href="{{pathFor 'contactDetail'}}" class="contactFindClick">{{firstName}} {{lastName}} {{organization}}</a> {{#if starred}}
+						<span class="socialStar starred"><i class="fa fa-star"></i></span>
+					{{/if}}</li>
+		    {{/EasySearch.Each}}</div>
+	</div>
+
+<!--   {{> EasySearch.LoadMore index=contactsIndex}} -->
+
+<!--
+  {{#EasySearch.IfNoResults index=contactsIndex}}
+    <div class="no-results">No results found!</div>
+  {{/EasySearch.IfNoResults}}
+-->
+    
+<!--
+	<div class="autosuggest-component">
+	  {{> EasySearch.Autosuggest index=contactsIndex class="contactSearch" id="contactSearch" placeholder="Find or Add Contacts"}}
+	</div>
+   <div class="contactList">
+    {{#each contacts}}
+      {{> contactItem}}
+    {{/each}}
+  </div>
+-->
+
 </template>

@@ -19,19 +19,22 @@
 		            <span class="badge"><i class="fa fa-star"></i> {{reminderCount}}</span>
 		    {{/if}}
 		            </a></li>
-	            <li> 
-					<form class="navbar-form" role="search">
-						<div class="input-group">
-							<input type="input" class="form-control" placeholder="Add or Find Contacts" name="srch-term" id="srch-term">
+	            <li class="hidden-xs hidden-sm hidden-md hidden-lg"> 
+	            	{{> contactSearch}}
+<!--
+								<form class="navbar-form" role="search">
+									<div class="input-group">
+										<input type="input" class="form-control" placeholder="Add or Find Contacts" name="srch-term" id="srch-term">
 				            <div class="input-group-btn">
-				                <button class="btn btn-success" type="button" data-toggle="modal" data-target="#add-search"><i class="glyphicon glyphicon-search"></i></button>
+				            	<button class="btn btn-success" type="button" data-toggle="modal" data-target="#add-search"><i class="glyphicon glyphicon-search"></i></button>
 			            	</div>
-						</div>
-	        		</form>
+									</div>
+	        			</form>
+-->
 	            </li>
 	          </ul>
 			  <ul class="nav navbar-nav navbar-right">
-	            <li class="dropdown hidden-xs hidden-sm hidden-md">
+	            <li class="dropdown hidden-xs hidden-sm hidden-md hidden-lg">
 	              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://gravatar.com/avatar/8f29b038cba2a4339364bf8e345461eb?s=30" class="gravatar"> <span class="glyphicon glyphicon-cog"></span></a>
 	              <ul class="dropdown-menu">
 		            <li><a href="#">Invite Teammate</a></li>
@@ -44,17 +47,20 @@
 	                <li><button type="button" id="logout" class="btn btn-link">Log Out</button></li>
 	              </ul>
 	            </li>
-            	<li class="visible-xs visible-sm visible-md"><a href="#">Invite Teammate</a></li>
-				<li class="visible-xs visible-sm visible-md"><a href="#">Manage Team</a></li>
-	            <li role="separator" class="divider visible-xs visible-sm visible-md"></li>
-				<li class="visible-xs visible-sm visible-md"><a href="{{pathFor 'preferences'}}">Preferences</a></li>
-				<li class="visible-xs visible-sm visible-md"><a href="#">Support</a></li>
-				<li class="visible-xs visible-sm visible-md"><a href="#">Upgrade</a></li>
-				<li role="separator" class="divider visible-xs visible-sm visible-md"></li>
+            	<li class="visible-xs visible-sm visible-md visible-lg"><a href="#">Invite Teammate</a></li>
+				<li class="visible-xs visible-sm visible-md visible-lg"><a href="#">Manage Team</a></li>
+	            <li role="separator" class="divider visible-xs visible-sm visible-md visible-lg"></li>
+				<li class="visible-xs visible-sm visible-md visible-lg"><a href="{{pathFor 'preferences'}}">Preferences</a></li>
+				<li class="visible-xs visible-sm visible-md visible-lg"><a href="#">Support</a></li>
+				<li class="visible-xs visible-sm visible-md visible-lg"><a href="#">Upgrade</a></li>
+				<li role="separator" class="divider visible-xs visible-sm visible-md visible-lg"></li>
 				<li><button type="button" id="logout" class="btn btn-link visible-xs visible-sm visible-md">Log Out</button></li>
 
 	          </ul>
         </div><!--/.nav-collapse -->
+        <div class="visible-xs visible-sm visible-md visible-lg">
+	        {{> contactSearch}}
+        </div>
       </div>
     </nav>
 

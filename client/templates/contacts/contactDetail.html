@@ -1,9 +1,11 @@
-<template name="contactItem">
+<template name="contactDetail">
+<h2>{{> editableText collection="contacts" field="firstName"}} {{> editableText collection="contacts" field="lastName"}}</h2>
+<h3>{{> editableText collection="contacts" field="organization"}}</h3>
   <div class="contact">	   
 	    <div class="contactList">
 	      <li class="editable">
 	      
-      <span class="editable {{#if archived}}archived{{/if}}"  >{{> editableText collection="contacts" field="firstName"}} {{> editableText collection="contacts" field="lastName"}}</span> 
+      <span class="editable {{#if archived}}archived{{/if}}"  ></span> 
       <span class="grey"> 
 <!--
       contactOwnerID: {{contactOwnerID}} 
@@ -21,10 +23,10 @@
 	  	{{address}}
 <!-- 	  	{{starred}} -->
 	  	{{#if starred}}
-				<a href="#" class="socialStar starred"><i class="fa fa-star"></i></a>
-				{{else}} 
+			<a href="#" class="socialStar starred"><i class="fa fa-star"></i></a>
+		{{else}} 
     		<a href="#" class="socialStar"><i class="fa fa-star-o"></i></a>
-			{{/if}}
+		{{/if}}
 	  	
 <!-- 	  	editme: {{> editableText collection="contacts" field="address"}} -->
 	  	

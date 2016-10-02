@@ -92,6 +92,14 @@ input[type="text"].add-reminder {
 	color:orange;
 }
 
+.hashtag{
+	color:purple;
+}
+
+.personlink {
+	color:blue;
+}
+
 .archived {
 	text-decoration: line-through;
 }
@@ -112,6 +120,24 @@ input[type="text"].add-reminder {
 	color:grey;
 }
 
+/* Contact Search */
+.contactSearchAutoSuggest{
+	background-color:white;
+	position:absolute;
+/* 	color:white; */
+	font-weight: bold;
+	list-style: none;
+	padding: 10px;
+	line-height: 1.2em;
+	border: 1px solid gray;
+	z-index: 100;
+}
+
+/*
+div:empty {
+   display: none;
+}
+*/
 
 /* Lifestream */
     #lifestream {

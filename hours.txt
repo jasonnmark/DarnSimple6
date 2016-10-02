@@ -1,0 +1,14 @@
+Date	Min	Notes
+???		??	Earlier hours from tracker
+???		??	Where did I save that?
+5/19	25	CoffeeScript Conversion
+5/20	55	CoffeeScript Conversion
+5/21  30  CoffeeScript Conversion
+5/21	30	Keypress on hover
+5/21	45	Color coding hashtags
+5/21	30	Routing and search results in URL
+5/22	140	Exploring Trello-knock-off and quickkeys
+5/22	20	Avatars
+5/23	30	Assorted Cleanup
+5/23	140	Search and cleanup
+5/23	30	Autocomplete and linking to external files. Not really getting it to work.

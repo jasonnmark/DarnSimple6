@@ -4,7 +4,7 @@
 	      <li class="{{#if isItDone}}checked{{/if}} editable">
 		  	<input type="checkbox" checked="{{isItDone}}" class="toggleIsItDone" />
 	      
-      <span class="text {{#if isItDone}}noteDone{{/if}} editNote editable"  >{{> editableText collection="notes" field="title"}}</span>  
+      <span class="text {{#if isItDone}}noteDone{{/if}} editNote editable"  >{{> editableText collection="notes" field="title"}}{{{noteTextParsed}}} {{noteID}}</span>  
       <span  class="noteEdit {{dateColor}}"  >{{daysFromNow}}</span> 
   {{#if starred}}
   	<a href="#" class="noteStar starred"><i class="fa fa-star"></i></a>
@@ -12,6 +12,16 @@
     <a href="#" class="noteStar"><i class="fa fa-star-o"></i></a>
   {{/if}}
 		  <a href="#" class="delete trashCan"><i class="fa fa-trash-o"></i></a>
+<!--
+	Autocomplete: {{> inputAutocomplete settings=settings id="msg" class="input-xlarge" placeholder="Chat..."}}
+	
+-->
+<!--
+	    {{#textareaAutocomplete settings=settings id="msg"}}
+        {{title}}
+    {{/textareaAutocomplete}}
+-->
+    
 		  </li>
 	    </div>
     </div>
@@ -22,4 +32,10 @@
 <!--
 using other plug: meteor remove lbee:moment-helpers
 {{moFromNow dueDate withoutSuffix}}
+-->
+
+<!--
+<template name="userPill">
+    <span class="label">{{username}}</span>
+</template>
 -->

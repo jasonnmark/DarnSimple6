@@ -1,5 +1,7 @@
+// Coffee conversion didn't work
+
 simpleDate = function(longDate) {
-	if (longDate){		
+    if (longDate){		
 	   var yyyy = longDate.getFullYear().toString();
 	   var mm = (longDate.getMonth()+1).toString();
 	   var dd  = longDate.getDate().toString();
@@ -19,4 +21,5 @@ daysAgo = function(longDate) {
 
 
 // SOURCE: http://stackoverflow.com/questions/27323791/round-a-timestamp-to-the-nearest-date
+
 
